@@ -6,6 +6,21 @@
 	objectVersion = 42;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		0B861B13152F9C8200D8FE07 /* PasswordAssistant.dmg */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0B861B25152F9C8400D8FE07 /* Build configuration list for PBXAggregateTarget "PasswordAssistant.dmg" */;
+			buildPhases = (
+				0B861B12152F9C8200D8FE07 /* ShellScript */,
+			);
+			dependencies = (
+				0B861B27152F9C9000D8FE07 /* PBXTargetDependency */,
+			);
+			name = PasswordAssistant.dmg;
+			productName = PasswordAssistant.dmg;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		0BE84D9A14DA24C300232ED1 /* Unlock-256.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0BE84D9914DA24C300232ED1 /* Unlock-256.icns */; };
 		108601431506243000B21560 /* SecurityInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 108601421506243000B21560 /* SecurityInterface.framework */; };
@@ -14,7 +29,18 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		9B06B1140A23A24C00C768CB /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B06B1130A23A24C00C768CB /* Controller.m */; };
+		D45701241757A4D100D4FD36 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = D45701221757A4D100D4FD36 /* MainMenu.nib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0B861B26152F9C9000D8FE07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
+			remoteInfo = "Password Assistant";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -30,9 +56,9 @@
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Password Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Password Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B06B1070A23A1F000C768CB /* SFPasswordAssistantInspectorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFPasswordAssistantInspectorController.h; sourceTree = "<group>"; };
-		9B06B10C0A23A23B00C768CB /* SecurityInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityInterface.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/SecurityInterface.framework; sourceTree = SYSTEM_DEVELOPER_DIR; };
 		9B06B1120A23A24C00C768CB /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
 		9B06B1130A23A24C00C768CB /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Controller.m; sourceTree = "<group>"; wrapsLines = 0; };
+		D45701231757A4D100D4FD36 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +86,6 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9B06B10C0A23A23B00C768CB /* SecurityInterface.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -112,6 +137,7 @@
 			children = (
 				0BE84D9914DA24C300232ED1 /* Unlock-256.icns */,
 				8D1107310486CEB800E47090 /* Info.plist */,
+				D45701221757A4D100D4FD36 /* MainMenu.nib */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 			);
 			name = Resources;
@@ -168,6 +194,7 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* Password Assistant */,
+				0B861B13152F9C8200D8FE07 /* PasswordAssistant.dmg */,
 			);
 		};
 /* End PBXProject section */
@@ -179,10 +206,29 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				0BE84D9A14DA24C300232ED1 /* Unlock-256.icns in Resources */,
+				D45701241757A4D100D4FD36 /* MainMenu.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B861B12152F9C8200D8FE07 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/PasswordAssistant.app",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/PasswordAssistant.dmg",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here\nset -ex\nINFOPLIST_FILE=\"Info.plist\"\nversion=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"$INFOPLIST_FILE\")\necho $version \necho $INFOPLIST_FILE\n[ \"$ACTION\" = build ] || exit 0\n[ \"$BUILD_VARIANTS\" = \"normal\" ] || exit 0\n\ndir=\"$TEMP_FILES_DIR/disk\"\ndmg=\"$BUILT_PRODUCTS_DIR/$PROJECT_NAME-$version.dmg\"\n\nrm -rf \"$dir\"\nrm -f \"$dmg\"\nmkdir \"$dir\"\ncp -R \"$BUILT_PRODUCTS_DIR/$PROJECT_NAME.app\" \"$dir\"\nrm -f \"$dmg\"\nhdiutil create -srcfolder \"$dir\" -volname \"$PROJECT_NAME\" \"$dmg\"\nhdiutil internet-enable -yes \"$dmg\"\nrm -rf \"$dir\"\nexit 0";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
@@ -197,6 +243,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0B861B27152F9C9000D8FE07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* Password Assistant */;
+			targetProxy = 0B861B26152F9C9000D8FE07 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -206,18 +260,48 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		D45701221757A4D100D4FD36 /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D45701231757A4D100D4FD36 /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		C01FCF4B08A954540054247B /* Debug */ = {
+		0B861B14152F9C8200D8FE07 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				DEPLOYMENT_LOCATION = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = PasswordAssistant.dmg;
+			};
+			name = Debug;
+		};
+		0B861B15152F9C8200D8FE07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = PasswordAssistant.dmg;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_OBJCPP_ARC_ABI = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "Password Assistant";
 				WRAPPER_EXTENSION = app;
 			};
@@ -226,11 +310,11 @@
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEPLOYMENT_LOCATION = YES;
-				DSTROOT = /;
+				CLANG_WARN_OBJCPP_ARC_ABI = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "Password Assistant";
 				WRAPPER_EXTENSION = app;
 			};
@@ -269,6 +353,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0B861B25152F9C8400D8FE07 /* Build configuration list for PBXAggregateTarget "PasswordAssistant.dmg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B861B14152F9C8200D8FE07 /* Debug */,
+				0B861B15152F9C8200D8FE07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Password Assistant" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

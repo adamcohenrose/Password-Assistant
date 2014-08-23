@@ -10,11 +10,13 @@
 #import "Controller.h"
 
 int main(int argc, char *argv[]) {
-    @autoreleasepool {
-        NSApplication * application = [NSApplication sharedApplication];
-        Controller * appDelegate = [[Controller alloc] init];
-        [application setDelegate:appDelegate];
-        [application run];
-    }
-    return EXIT_SUCCESS;
+//    @autoreleasepool {
+//        NSApplication * application = [NSApplication sharedApplication];
+//        Controller * appDelegate = [[Controller alloc] initWithNibName:@"MainMenu" bundle:nil];
+//        [application setDelegate:appDelegate];
+//        [application run];
+//    }
+//    return EXIT_SUCCESS;
+    
+    return NSApplicationMain(argc,  (const char **) argv);
 }
