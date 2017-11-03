@@ -1,10 +1,11 @@
 
 #import <Cocoa/Cocoa.h>
+#import <AppKit/NSResponder.h>
 
 @interface Controller : NSViewController <NSApplicationDelegate>
-    
-@property (nonatomic,strong) IBOutlet NSMenu *mymenu;
+{
+    IBOutlet NSMenu *_menu;
+}
 - (IBAction)showPasswordAssistantPanel:(id)sender;
-   
 
 @end

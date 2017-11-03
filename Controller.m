@@ -5,6 +5,7 @@
     SFPasswordAssistantInspectorController *pwAsst;
     NSStatusItem *statusItem;
 }
+@synthesize menu;
 
 - (void)awakeFromNib {
     // Get icon from bundle and create image of the right size

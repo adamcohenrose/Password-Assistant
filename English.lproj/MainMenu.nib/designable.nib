@@ -248,7 +248,7 @@
         </menu>
         <customObject id="218" userLabel="Controller" customClass="Controller">
             <connections>
-                <outlet property="mymenu" destination="29" id="HjM-x4-g4S"/>
+                <outlet property="_menu" destination="29" id="UH3-05-19h"/>
             </connections>
         </customObject>
     </objects>
