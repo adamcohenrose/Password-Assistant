@@ -3,7 +3,7 @@
 
 @interface Controller : NSViewController <NSApplicationDelegate>
     
-@property (nonatomic,strong) IBOutlet NSMenu *menu;
+@property (nonatomic,strong) IBOutlet NSMenu *mymenu;
 - (IBAction)showPasswordAssistantPanel:(id)sender;
    
 
