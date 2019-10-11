@@ -12,7 +12,8 @@
 int main(int argc, char *argv[]) {
 //    @autoreleasepool {
 //        NSApplication * application = [NSApplication sharedApplication];
-//        Controller * appDelegate = [[Controller alloc] initWithNibName:@"MainMenu" bundle:nil];
+//        Controller * appDelegate = [[Controller alloc] init];
+////            initWithNibName:@"MainMenu" bundle:nil];
 //        [application setDelegate:appDelegate];
 //        [application run];
 //    }

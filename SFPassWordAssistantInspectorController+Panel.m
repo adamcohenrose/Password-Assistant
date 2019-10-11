@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "SFPassWordAssistantInspectorController.h"
+#import "SFPasswordAssistantInspectorController.h"
 #import <objc/runtime.h>
 
 

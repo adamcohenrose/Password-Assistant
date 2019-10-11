@@ -4,10 +4,17 @@
 @implementation Controller {
     SFPasswordAssistantInspectorController *pwAsst;
     NSStatusItem *statusItem;
+    
+    NSWindow *baseWindow;
+    NSSecureTextField *secureTextField;
 }
 @synthesize menu;
 
 - (void)awakeFromNib {
+    // prepare a secure text field
+    baseWindow = [[NSWindow alloc] init];
+    secureTextField = [[NSSecureTextField alloc] init];
+    
     // Get icon from bundle and create image of the right size
     
     NSURL* iconURL = [[NSBundle mainBundle] URLForResource:@"Unlock-256" withExtension:@"icns"];
@@ -32,6 +39,8 @@
     }
     
     pwAsst = [[SFPasswordAssistantInspectorController alloc] init];
+    [pwAsst setBaseWindow:baseWindow];
+    [pwAsst setNewPasswordField:secureTextField];
     
     // Load the nib to force pwAsst to create its panel without showing the panel to the
     // user.  Then hide the panel by setting its alpha to zero, before doing the normal
@@ -43,14 +52,9 @@
     [pwAsst showPasswordAssistantPanel:sender];
     
 
-    // Place the panel directly underneat the status bar icon.
-    if (sender && [sender isKindOfClass:[NSView class]]) {
-        NSPanel* panel = [pwAsst panel];
-        NSRect frame = [panel convertRectFromScreen:[[sender window] convertRectToScreen:[sender frame]]];
-        NSPoint topLeft = frame.origin;
-        topLeft.y += frame.size.height;
-        [panel setFrameTopLeftPoint:topLeft];
-    }
+    // Place the panel somewhere sensible
+    NSPanel* panel = [pwAsst panel];
+    [panel center];
     
     // Once the panel is set up in the right place, show it to the user.
     [[pwAsst panel] setAlphaValue:1];
