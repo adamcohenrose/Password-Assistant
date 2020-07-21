@@ -35,7 +35,9 @@
 
 - (IBAction)showPasswordAssistantPanel:(id)sender {
     if (pwAsst) {
-        [pwAsst closePasswordAssistantPanel];
+        [[pwAsst panel] makeKeyAndOrderFront:sender];
+        [NSApp activateIgnoringOtherApps:YES];
+        return;
     }
     
     pwAsst = [[SFPasswordAssistantInspectorController alloc] init];
